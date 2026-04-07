@@ -17,20 +17,18 @@
     </main>
 
     <!-- Error modal (hidden by default, driven entirely by JS) -->
-    <div id="error-overlay" class="error-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="error-title">
-        <div class="error-modal">
-            <h2 id="error-title" class="error-heading">Error</h2>
-            <div class="error-meta">
-                <span class="error-code" id="error-code"></span>
-                <time class="error-timestamp" id="error-timestamp"></time>
-            </div>
-            <div class="error-body" id="error-body"></div>
-            <details class="error-debug">
-                <summary>Debug Information</summary>
-                <pre id="error-debug-info"></pre>
-            </details>
-            <button id="error-dismiss" class="btn-dismiss">Dismiss</button>
+    <div class="error-modal">
+        <h2 id="error-title" class="error-heading">Error</h2>
+        <div class="error-meta">
+            <span class="error-code" id="error-code"></span>
+            <time class="error-timestamp" id="error-timestamp"></time>
         </div>
+        <div class="error-body" id="error-body"></div>
+        <div class="error-debug">
+            <h3 class="error-debug-heading">Debug Information</h3>
+            <pre id="error-debug-info"></pre>
+        </div>
+        <button id="error-dismiss" class="btn-dismiss">Dismiss</button>
     </div>
 
     <script src="app.js"></script>
