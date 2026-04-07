@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <h1 class="title">Welcome to the Application</h1>
+        <p class="body-text">
+            This is a simple, clean single-page application. Use the button below
+            to get started. Everything you need is right here — no navigation required.
+        </p>
+        <button id="action-button" class="btn-primary">Get Started</button>
+    </main>
+
+    <!-- Error modal (hidden by default, driven entirely by JS) -->
+    <div id="error-overlay" class="error-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="error-title">
+        <div class="error-modal">
+            <h2 id="error-title" class="error-heading">Error</h2>
+            <div class="error-meta">
+                <span class="error-code" id="error-code"></span>
+                <time class="error-timestamp" id="error-timestamp"></time>
+            </div>
+            <div class="error-body" id="error-body"></div>
+            <details class="error-debug">
+                <summary>Debug Information</summary>
+                <pre id="error-debug-info"></pre>
+            </details>
+            <button id="error-dismiss" class="btn-dismiss">Dismiss</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
