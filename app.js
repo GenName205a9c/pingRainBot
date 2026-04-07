@@ -18,10 +18,10 @@
  */
 function onButtonClick() {
     // ----- stub start -----
-    console.log("[onButtonClick] fired — this is a stub.");
+    // console.log("[onButtonClick] fired — this is a stub.");
 
     // Uncomment the line below to test the error modal:
-    // showError("E-0001", "Something went wrong while processing your request.");
+    showError("E-0001", "Something went wrong while processing your request.");
     // ----- stub end -----
 }
 
