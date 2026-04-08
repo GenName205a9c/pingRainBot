@@ -21,7 +21,7 @@ function onButtonClick() {
     // console.log("[onButtonClick] fired — this is a stub.");
 
     // Uncomment the line below to test the error modal:
-    showError("E-0001", "Something went wrong while processing your request.");
+    showError(`E-30${Math.round(Math.random()*10)}`, "Missive intercepted by Burn's forces... \n(API call failed. fuck.)");
     // ----- stub end -----
 }
 

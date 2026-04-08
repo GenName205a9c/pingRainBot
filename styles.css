@@ -3,16 +3,16 @@
    ========================================================================== */
 :root {
     /* --- Surface & background --- */
-    --color-bg:             #f4f6f8;
-    --color-surface:        #ffffff;
+    --color-bg:             #ede4a1;
+    --color-surface:        #f0dd4c;
 
     /* --- Text --- */
     --color-text-primary:   #1a1a2e;
     --color-text-secondary: #555770;
 
     /* --- Accent / brand --- */
-    --color-accent:         #4f46e5;
-    --color-accent-hover:   #4338ca;
+    --color-accent:         #4c4a7d;
+    --color-accent-hover:   #4f44ba;
     --color-accent-text:    #ffffff;
 
     /* --- Error modal --- */
@@ -216,6 +216,7 @@ body {
     white-space: pre-wrap;
     word-break: break-word;
 }
+
 .btn-dismiss {
     appearance: none;
     border: 1px solid var(--color-error-border);
