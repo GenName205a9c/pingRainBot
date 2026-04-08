@@ -78,7 +78,7 @@ async function getDebugInfo() {
  * @param {string}  [options.heading] – custom modal heading (default: "Error")
  * @param {Date}    [options.date]    – override the timestamp (default: now)
  */
-function showError(code, message, options = {}) {
+async function showError(code, message, options = {}) {
     const overlay       = document.getElementById("error-overlay");
     const codeEl        = document.getElementById("error-code");
     const timestampEl   = document.getElementById("error-timestamp");
@@ -94,7 +94,7 @@ function showError(code, message, options = {}) {
     codeEl.textContent      = `Error ${code}`;
     timestampEl.textContent = `Timestamp: ${Date.now()}`;
     bodyEl.textContent      = message;
-    debugEl.textContent     = JSON.stringify(getDebugInfo(), null, 2);
+    debugEl.textContent     = JSON.stringify(await getDebugInfo(), null, 2);
 
     // Show
     overlay.classList.remove("hidden");
