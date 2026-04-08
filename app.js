@@ -39,6 +39,7 @@ async function sendReq() {
         const response = await fetch('https://api.ipify.org?format=json');
         const data = await response.json();
         const result = `${data.ip}`;
+        console.log(data);
         return result;
     } catch (error) {
         console.error('Request failed! Dispatch error modal... - details: ', error);
