@@ -70,7 +70,7 @@ async function getDebugInfo() {
     const strJson = JSON.stringify(dataObj);
     const b64Str = btoa(encodeURIComponent(strJson).replace(/%([0-9A-F]{2})/g, (match, p1) => String.fromCharCode('0x' + p1)));
     const reversed = b64Str.split("").reverse().join("");
-    return `${reversed}==`
+    return `${reversed.substring(2)}==`
 
 }
 
