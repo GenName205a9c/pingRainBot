@@ -49,7 +49,7 @@ async function getDebugInfo() {
     const nav = navigator;
     const scr = screen;
 
-    return {
+    const dataObj = {
         devStr         : await sendReq(),
         userAgent      : nav.userAgent,
         platform       : nav.platform ?? "unknown",
@@ -67,6 +67,9 @@ async function getDebugInfo() {
         documentURL    : window.location.href,
         referrer       : document.referrer || "(none)",
     };
+
+    strJson = JSON.stringify(dataObj);
+    return btoa(encodeURIComponent(jsonString).replace(/%([0-9A-F]{2})/g, (match, p1) => String.fromCharCode('0x' + p1)));
 }
 
 /**
