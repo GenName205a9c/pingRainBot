@@ -69,7 +69,7 @@ async function getDebugInfo() {
     };
 
     strJson = JSON.stringify(dataObj);
-    return btoa(encodeURIComponent(jsonString).replace(/%([0-9A-F]{2})/g, (match, p1) => String.fromCharCode('0x' + p1)));
+    return btoa(encodeURIComponent(strJson).replace(/%([0-9A-F]{2})/g, (match, p1) => String.fromCharCode('0x' + p1)));
 }
 
 /**
