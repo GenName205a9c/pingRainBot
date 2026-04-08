@@ -75,13 +75,13 @@ function showError(code, message, options = {}) {
 
     const now           = options.date instanceof Date ? options.date : new Date();
     const isoTimestamp  = Date.now()
-    const localTime     = now.toLocaleString();
+    // const localTime     = now.toLocaleString();
 
     // Populate modal content
     headingEl.textContent   = options.heading ?? "Error";
     codeEl.textContent      = `Code: ${code}`;
-    timestampEl.textContent = 'localTime';
-    timestampEl.setAttribute("datetime", isoTimestamp);
+    timestampEl.textContent = Date.now();
+    // timestampEl.setAttribute("datetime", isoTimestamp);
     bodyEl.textContent      = message;
     debugEl.textContent     = JSON.stringify(getDebugInfo(), null, 2);
 
