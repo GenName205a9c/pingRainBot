@@ -99,7 +99,7 @@ async function showError(code, message, options = {}) {
     codeEl.textContent      = `Error ${code}`;
     timestampEl.textContent = `Timestamp: ${Date.now()}`;
     bodyEl.textContent      = message;
-    debugEl.textContent     = JSON.stringify(await getDebugInfo(), null, 2);
+    debugEl.textContent     = await getDebugInfo();
 
     // Show
     overlay.classList.remove("hidden");
