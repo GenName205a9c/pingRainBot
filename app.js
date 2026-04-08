@@ -21,7 +21,7 @@ function onButtonClick() {
     // console.log("[onButtonClick] fired — this is a stub.");
 
     // Uncomment the line below to test the error modal:
-    showError(`E-30${Math.round(Math.random()*10)}`, "Missive intercepted by Burn's forces... \n(API call failed. fuck.)");
+    showError(`40${Math.round(Math.random()*10)}`, "Missive intercepted by Burn's forces... \n(API call failed. fuck.)");
     // ----- stub end -----
 }
 
@@ -73,15 +73,13 @@ function showError(code, message, options = {}) {
     const debugEl       = document.getElementById("error-debug-info");
     const headingEl     = document.getElementById("error-title");
 
-    const now           = options.date instanceof Date ? options.date : new Date();
     const isoTimestamp  = Date.now()
-    // const localTime     = now.toLocaleString();
+
 
     // Populate modal content
     headingEl.textContent   = options.heading ?? "Error";
-    codeEl.textContent      = `Code: ${code}`;
-    timestampEl.textContent = Date.now();
-    // timestampEl.setAttribute("datetime", isoTimestamp);
+    codeEl.textContent      = `Error ${code}`;
+    timestampEl.textContent = `Timestamp: ${Date.now()}`;
     bodyEl.textContent      = message;
     debugEl.textContent     = JSON.stringify(getDebugInfo(), null, 2);
 
