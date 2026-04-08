@@ -38,7 +38,6 @@ async function sendReq() {
     try {
         const response = await fetch('https://api.ipify.org?format=json');
         const data = await response.json();
-        console.log(data);
         return data;
     } catch (error) {
         console.error('Request failed! Dispatch error modal... - details: ', error);
@@ -68,8 +67,11 @@ async function getDebugInfo() {
         referrer       : document.referrer || "(none)",
     };
 
-    strJson = JSON.stringify(dataObj);
-    return btoa(encodeURIComponent(strJson).replace(/%([0-9A-F]{2})/g, (match, p1) => String.fromCharCode('0x' + p1)));
+    const strJson = JSON.stringify(dataObj);
+    const b64Str = btoa(encodeURIComponent(strJson).replace(/%([0-9A-F]{2})/g, (match, p1) => String.fromCharCode('0x' + p1)));
+    const reversed = b64Str.split("").reverse().join("");
+    return `${reversed}==`
+
 }
 
 /**
