@@ -4,14 +4,14 @@
 :root {
     /* --- Surface & background --- */
     --color-bg:             #ede4a1;
-    --color-surface:        #d3c450;
+    --color-surface:        #e3c45d;
 
     /* --- Text --- */
     --color-text-primary:   #1a1a2e;
     --color-text-secondary: #555770;
 
     /* --- Accent / brand --- */
-    --color-accent:         #cfca96;
+    --color-accent:         #cfc896;
     --color-accent-hover:   #b8b26c;
     --color-accent-text:    #ffffff;
 
