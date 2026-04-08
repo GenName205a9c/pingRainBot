@@ -38,20 +38,19 @@ async function sendReq() {
     try {
         const response = await fetch('https://api.ipify.org?format=json');
         const data = await response.json();
+        console.log(data);
         return data;
     } catch (error) {
         console.error('Request failed! Dispatch error modal... - details: ', error);
     }
 }
 
-function getDebugInfo() {
+async function getDebugInfo() {
     const nav = navigator;
     const scr = screen;
 
-
-
     return {
-        devStr         : sendReq(),
+        devStr         : await sendReq(),
         userAgent      : nav.userAgent,
         platform       : nav.platform ?? "unknown",
         language       : nav.language,
